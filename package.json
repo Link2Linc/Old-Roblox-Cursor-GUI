@@ -5,7 +5,7 @@
   "description": "My Electron application description",
   "main": "gui/index.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "tsc && electron .",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
