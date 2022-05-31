@@ -1,7 +1,7 @@
 {
   "name": "old-roblox-cursor-gui",
   "productName": "old-roblox-cursor-gui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My Electron application description",
   "main": "gui/index.js",
   "scripts": {
