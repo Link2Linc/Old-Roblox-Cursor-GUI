@@ -1,3 +1,6 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-action.json": "file:///c%3A/Users/1536728/Old-Roblox-Cursor-GUI/.github/workflows/build.yml"
+    }
 }
