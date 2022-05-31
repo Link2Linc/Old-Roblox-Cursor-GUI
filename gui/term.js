@@ -73,7 +73,7 @@ function bringBackOldCursorMac() {
         yield delay(1);
         fs_1.default.copyFile(oldDir, newDir, function (err) {
             if (err)
-                throw err;
+                console.log(err);
             console.log('Copied ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -82,7 +82,7 @@ function bringBackOldCursorMac() {
         yield delay(1);
         fs_1.default.copyFile(oldDir, newDir, function (err) {
             if (err)
-                throw err;
+                console.log(err);
             console.log('Copied ' + oldDir + ' to ' + newDir);
             console.log("Successfully completed operation. Please restart your Roblox client.");
         });
@@ -113,9 +113,12 @@ function getLatestRobloxVersion() {
     }
     return latestVersion;
 }
-const latestVersion = getLatestRobloxVersion();
 function bringBackOldCursorWin() {
     return __awaiter(this, void 0, void 0, function* () {
+        const homedir = os_1.default.homedir();
+        +"/";
+        const robloxDir = homedir + "\\AppData\\Local\\Roblox\\Versions" + "\\";
+        const latestVersion = getLatestRobloxVersion();
         console.log("Roblox version directory is " + robloxDir);
         console.log("Latest roblox version installed is " + latestVersion + ". Defulting to this version.");
         var backupDir = robloxDir + latestVersion + "\\Content\\textures\\oldCursorBackup\\";
@@ -129,7 +132,7 @@ function bringBackOldCursorWin() {
         yield delay(1);
         fs_1.default.rename(oldCursorDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Moved ' + oldCursorDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -138,7 +141,7 @@ function bringBackOldCursorWin() {
         yield delay(1);
         fs_1.default.rename(oldCursorDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Moved ' + oldCursorDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -153,7 +156,7 @@ function bringBackOldCursorWin() {
         yield delay(2);
         fs_1.default.rename(oldDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Moved ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -162,7 +165,7 @@ function bringBackOldCursorWin() {
         yield delay(1);
         fs_1.default.rename(oldDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Moved ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -171,7 +174,7 @@ function bringBackOldCursorWin() {
         yield delay(1);
         fs_1.default.copyFile(oldDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Copied ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
@@ -180,13 +183,14 @@ function bringBackOldCursorWin() {
         yield delay(1);
         fs_1.default.copyFile(oldDir, newDir, function (err) {
             if (err)
-                console.log("Roblox is not installed. Please install Roblox and try again.");
+                console.log(err);
             console.log('Copied ' + oldDir + ' to ' + newDir);
         });
         console.log("Successfully completed operation. Please restart your Roblox client.");
     });
 }
 function revertDefaultCursorWin() {
+    const latestVersion = getLatestRobloxVersion();
     var oldCursorDir = robloxDir + latestVersion + "\\Content\\textures\\cursorBackup\\ArrowCursor.png";
     var newDir = robloxDir + latestVersion + "\\Content\\textures\\ArrowCursor.png";
     fs_1.default.copyFileSync(oldCursorDir, newDir);
