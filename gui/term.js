@@ -16,6 +16,7 @@ const xterm_1 = require("xterm");
 const fs_1 = __importDefault(require("fs"));
 const termdiv = document.getElementById('terminal');
 const startbtn = document.getElementById('start-button');
+const revertbtn = document.getElementById('revert-button');
 var term = new xterm_1.Terminal();
 term.open(termdiv);
 term.write('When you click start, the output will be shown here.\r\n');
@@ -96,12 +97,20 @@ function revertDefaultCursorMac() {
     console.log("Successfully completed operation. Please restart your Roblox client.");
 }
 // end of mac functions
+// start windows functions
 startbtn.onclick = function () {
     if (process.platform === "darwin") {
         term.write('Platform detected: MacOS\r\n');
-        bringBackOldCursorMac();
     }
     else if (process.platform === "win32") {
         term.write('Platform detected: Windows\r\n');
+    }
+};
+revertbtn.onclick = function () {
+    if (process.platform === "darwin") {
+        console.log("Platform detected: MacOS");
+    }
+    else if (process.platform === "win32") {
+        console.log("Platform detected: Windows");
     }
 };
