@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old-Roblox-Cursor</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="detect.js"></script>
+    <script src="../node_modules/xterm/lib/xterm.js"></script>
+    <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
+</head>
+<body>
+    <h1 id="welcome">Welcome to the Old Roblox Cursor Restore program!<br></h1>
+    <h3 id="caveats">The GUI is still in <strong>heavy development</strong>, and will have a very basic layout. It just exist due to less computer-savvy people using this program.</h3>
+    <button id="start-button">Start</button>
+    <p id="platform"></p>
+    <div id="terminal">
+        <script>
+            var term = new Terminal();
+            term.open(document.getElementById('terminal'));
+            term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
+          </script>
+    </div>
+</body>
+</html>
