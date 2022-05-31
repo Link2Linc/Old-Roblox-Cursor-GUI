@@ -85,7 +85,7 @@ function revertDefaultCursorMac() {
 const homedir = os.homedir(); + "/"
 const robloxDir = homedir + "\\AppData\\Local\\Roblox\\Versions" + "\\";
 
-console.log("Roblox version directory is " + robloxDir);
+
 
 // find the newest folder in the robloxDir directory and return it
 function getLatestRobloxVersion() {
@@ -99,11 +99,12 @@ function getLatestRobloxVersion() {
     return latestVersion;
 }
 
-const latestVersion = getLatestRobloxVersion();
-console.log("Latest roblox version installed is " + latestVersion + ". Defulting to this version.");
 
+const latestVersion = getLatestRobloxVersion();
 
 async function bringBackOldCursorWin(){
+    console.log("Roblox version directory is " + robloxDir);
+    console.log("Latest roblox version installed is " + latestVersion + ". Defulting to this version.");
     var backupDir = robloxDir + latestVersion + "\\Content\\textures\\oldCursorBackup\\";
     var oldCursorDir = robloxDir + latestVersion + "\\Content\\textures\\ArrowCursor.png";
     var newDir = robloxDir + latestVersion + "\\Content\\textures\\oldCursorBackup\\ArrowCursor.png";
