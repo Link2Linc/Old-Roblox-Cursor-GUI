@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Old-Roblox-Cursor</title>
     <link rel="stylesheet" href="index.css">
-    <script defer src="detect.js"></script>
+    <script>var exports = {};</script>
+    <script defer src="term.js"></script>
     <script src="../node_modules/xterm/lib/xterm.js"></script>
     <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
+    <script src="../scripts/mac.js"></script>
+    
 </head>
 <body>
     <h1 id="welcome">Welcome to the Old Roblox Cursor Restore program!<br></h1>
@@ -16,11 +19,6 @@
     <button id="start-button">Start</button>
     <p id="platform"></p>
     <div id="terminal">
-        <script>
-            var term = new Terminal();
-            term.open(document.getElementById('terminal'));
-            term.write('Terminal output below.\r\n');
-          </script>
     </div>
 </body>
 </html>
