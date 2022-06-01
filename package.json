@@ -10,7 +10,8 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build": "tsc"
+    "build": "tsc",
+    "build-local": "tsc && electron-builder build"
   },
   "keywords": [],
   "author": {
