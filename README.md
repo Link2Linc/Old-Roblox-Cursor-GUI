@@ -1,5 +1,6 @@
 # Old-Roblox-Cursor-GUI
 
 To be implemented [here](https://github.com/Link2Linc/Old-Roblox-Cursor) (sike, that was a lie.)
+Because of troubles implementing a GUI and TUI version w/ NodeJS, I just decided to not do it. Sometime in the future, it will be implemented.
 
-Just go to https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest and download that.
+Head over [here to the releases section](https://github.com/Link2Linc/Old-Roblox-Cursor-GUI)
