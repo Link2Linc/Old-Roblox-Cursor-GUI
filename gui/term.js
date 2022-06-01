@@ -130,20 +130,12 @@ function bringBackOldCursorWin() {
         }
         ;
         yield delay(1);
-        fs_1.default.rename(oldCursorDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Moved ' + oldCursorDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldCursorDir, newDir);
         yield delay(1);
         var oldCursorDir = robloxDir + latestVersion + "\\content\\textures\\ArrowFarCursor.png";
         var newDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowFarCursor.png";
         yield delay(1);
-        fs_1.default.rename(oldCursorDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Moved ' + oldCursorDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldCursorDir, newDir);
         yield delay(1);
         var cursorBackup = robloxDir + latestVersion + "\\content\\textures\\cursorBackup";
         var oldDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowCursor.png";
@@ -154,38 +146,22 @@ function bringBackOldCursorWin() {
         }
         ;
         yield delay(2);
-        fs_1.default.rename(oldDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Moved ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         yield delay(1);
         var oldDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowFarCursor.png";
         var newDir = robloxDir + latestVersion + "\\content\\textures\\cursorBackup\\ArrowFarCursor.png";
         yield delay(1);
-        fs_1.default.rename(oldDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Moved ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         yield delay(1);
         var oldDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowCursor.png";
         var newDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowCursor.png";
         yield delay(1);
-        fs_1.default.copyFile(oldDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Copied ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         yield delay(1);
         var oldDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowFarCursor.png";
         var newDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowFarCursor.png";
         yield delay(1);
-        fs_1.default.copyFile(oldDir, newDir, function (err) {
-            if (err)
-                console.log(err);
-            console.log('Copied ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         console.log("Successfully completed operation. Please restart your Roblox client.");
     });
 }

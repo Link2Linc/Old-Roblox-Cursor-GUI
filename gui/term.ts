@@ -116,18 +116,12 @@ async function bringBackOldCursorWin(){
         fs.mkdirSync(backupDir);
     };
     await delay(1);
-    fs.rename(oldCursorDir, newDir, function (err) {
-if (err) console.log(err)
-        console.log('Moved ' + oldCursorDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldCursorDir, newDir);
     await delay(1);
     var oldCursorDir = robloxDir + latestVersion + "\\content\\textures\\ArrowFarCursor.png";
     var newDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowFarCursor.png";
     await delay(1);
-    fs.rename(oldCursorDir, newDir, function (err) {
-if (err) console.log(err)
-        console.log('Moved ' + oldCursorDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldCursorDir, newDir);
     await delay(1);
     var cursorBackup = robloxDir + latestVersion + "\\content\\textures\\cursorBackup";
     var oldDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowCursor.png";
@@ -137,34 +131,22 @@ if (err) console.log(err)
         fs.mkdirSync(cursorBackup);
     };
     await delay(2);
-    fs.rename(oldDir, newDir, function (err) {
-    if (err) console.log(err)
-        console.log('Moved ' + oldDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldDir, newDir);
     await delay(1);
     var oldDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowFarCursor.png";
     var newDir = robloxDir + latestVersion + "\\content\\textures\\cursorBackup\\ArrowFarCursor.png";
     await delay(1);
-    fs.rename(oldDir, newDir, function (err) {
-    if (err) console.log(err)
-        console.log('Moved ' + oldDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldDir, newDir);
     await delay(1);
     var oldDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowCursor.png";
     var newDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowCursor.png";
     await delay(1);
-    fs.copyFile(oldDir, newDir, function (err) {
-    if (err) console.log(err)
-        console.log('Copied ' + oldDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldDir, newDir);
     await delay(1);
     var oldDir = robloxDir + latestVersion + "\\content\\textures\\oldCursorBackup\\ArrowFarCursor.png";
     var newDir = robloxDir + latestVersion + "\\content\\textures\\Cursors\\KeyboardMouse\\ArrowFarCursor.png";
     await delay(1);
-    fs.copyFile(oldDir, newDir, function (err) {
-    if (err) console.log(err)
-        console.log('Copied ' + oldDir + ' to ' + newDir)
-    });
+    fs.copyFileSync(oldDir, newDir);
     console.log("Successfully completed operation. Please restart your Roblox client.");
 }
 
